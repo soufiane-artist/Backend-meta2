@@ -35,6 +35,7 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
 dotenv.config()
 db()
 app.use(express.json())
