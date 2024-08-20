@@ -31,9 +31,10 @@ const limiter = rateLimit({
 // use
 app.use(helmet());
 app.use(cors({
-    origin: ["https://finale-backend2.onrender.com", "http://localhost:3000"],
-    methods: ["GET", "POST"]
-  }));
+    origin: 'http://localhost:3000',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 dotenv.config()
 db()
 app.use(express.json())
