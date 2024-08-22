@@ -31,7 +31,7 @@ const limiter = rateLimit({
 // use
 app.use(helmet());
 app.use(cors({
-    origin: ['https://test3-front-dsya.onrender.com','https://frontend-aabg.onrender.com','http://localhost:3000','http://localhost:2002'],
+    origin: '*', // يسمح لأي نطاق بالوصول (للأغراض التطويرية فقط)
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
