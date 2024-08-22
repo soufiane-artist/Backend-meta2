@@ -52,7 +52,7 @@ const server = app.listen(process.env.PORT,()=>{
 
 const io = socketIo(server ,{
   cors :{
-    origin: ["http://localhost:2002","https://test3-front-dsya.onrender.com","http://localhost:3000"],
+    origin: ["https://66c774abf02c1b70c716b9c0--boisterous-puffpuff-d6b125.netlify.app","http://localhost:2002","https://test3-front-dsya.onrender.com","http://localhost:3000"],
     methods: ["GET", "POST"]
   }
 })
