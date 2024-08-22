@@ -31,7 +31,7 @@ const limiter = rateLimit({
 // use
 app.use(helmet());
 app.use(cors({
-    origin: ['https://test-5-back-build.onrender.com','*'], // يسمح لأي نطاق بالوصول (للأغراض التطويرية فقط)
+    origin: '*', // يسمح لأي نطاق بالوصول (للأغراض التطويرية فقط)
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
