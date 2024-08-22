@@ -52,7 +52,7 @@ const server = app.listen(process.env.PORT,()=>{
 
 const io = socketIo(server ,{
   cors :{
-    origin: ["https://test-5-back-build.onrender.com","http://localhost:2002","https://test3-front-dsya.onrender.com","http://localhost:3000"],
+    origin: ["https://finale-project.onrender.com","http://localhost:2002","https://test3-front-dsya.onrender.com","http://localhost:3000"],
     methods: ["GET", "POST"]
   }
 })
