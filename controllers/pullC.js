@@ -27,7 +27,7 @@ module.exports.SkrillPull = async(req,res)=>{
         clientId :"66605df575f2586f6911ef86",
         clientEmail: user.email,
         amount: req.body.amount,
-        message : `You have withdrawn an amount Skrill"${req.body.amount} USD" `,
+        message : `You have withdrawn an amount Skrill"${req.body.amount} USD email Bank":${req.body.emailBank} `,
         operation : "Pull"
     })
     await notif.save()
@@ -66,7 +66,7 @@ module.exports.PaypalPullBank = async(req,res)=>{
         clientId :"66605df575f2586f6911ef86",
         clientEmail: user.email,
         amount: req.body.amount,
-        message : `You have withdrawn an amount Paypal"${req.body.amount} USD" `,
+        message : `You have withdrawn an amount Paypal"${req.body.amount} USD email Bank":${req.body.emailBank} `,
         operation : "Pull"
     })
     await notif.save()
