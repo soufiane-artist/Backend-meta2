@@ -31,7 +31,7 @@ const limiter = rateLimit({
 // use
 app.use(helmet());
 app.use(cors({
-    origin: ['https://test3-front-dsya.onrender.com','https://frontend-aabg.onrender.com','http://localhost:3000'],
+    origin: ['https://test3-front-dsya.onrender.com','https://frontend-aabg.onrender.com','http://localhost:3000','http://localhost:2002'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -52,7 +52,7 @@ const server = app.listen(process.env.PORT,()=>{
 
 const io = socketIo(server ,{
   cors :{
-    origin: ["https://test3-front-dsya.onrender.com","http://localhost:3000"],
+    origin: ["http://localhost:2002","https://test3-front-dsya.onrender.com","http://localhost:3000"],
     methods: ["GET", "POST"]
   }
 })
