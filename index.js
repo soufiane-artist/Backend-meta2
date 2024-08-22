@@ -31,7 +31,7 @@ const limiter = rateLimit({
 // use
 app.use(helmet());
 app.use(cors({
-    origin: 'https://66c774abf02c1b70c716b9c0--boisterous-puffpuff-d6b125.netlify.app', // يسمح لأي نطاق بالوصول (للأغراض التطويرية فقط)
+    origin: '*', // يسمح لأي نطاق بالوصول (للأغراض التطويرية فقط)
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
