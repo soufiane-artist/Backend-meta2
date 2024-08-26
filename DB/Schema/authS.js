@@ -23,7 +23,7 @@ const newUser = new mongoose.Schema({
     },
     amount:{
         type:Number,
-        default:5000,
+        default:0,
         trim:true
     },
     profileImg:{
@@ -112,7 +112,7 @@ const newUser = new mongoose.Schema({
     isAdmin:{
         type:Boolean,
         required:true,
-        default:true
+        default:false
     }
 },{
     timestamps:true,
