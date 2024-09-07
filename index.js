@@ -10,6 +10,7 @@ const axios = require('axios')
 const path = require("path")
 const xss = require('xss-clean')
 const hpp = require('hpp')
+const morgan  = require('morgan')
 
 
 //client
@@ -48,6 +49,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended : false}))
 app.use(`${process.env.API_URL}`,require('./router/authR.JS'))
 app.use(`${process.env.API_URL}`,require('./router/SendMRouter'))
+app.use(morgan('dev'))
 
 
 const server = app.listen(process.env.PORT,()=>{
