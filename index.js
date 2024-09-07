@@ -8,6 +8,8 @@ const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const axios = require('axios')
 const path = require("path")
+const xss = require('xss-clean')
+const hpp = require('hpp')
 
 
 //client
@@ -29,6 +31,9 @@ const limiter = rateLimit({
   app.use(limiter);
 //___
 // use
+app.use(xss())
+app.use(hpp())
+
 app.use(helmet());
 app.use(cors({
     origin: '*', // يسمح لأي نطاق بالوصول (للأغراض التطويرية فقط)
