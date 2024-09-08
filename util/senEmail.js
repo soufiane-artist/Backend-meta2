@@ -9,13 +9,13 @@ module.exports = async(userEmail,subject,htmlTemplate)=>{
       port: 465,
       secure: true, // Use `true` for port 465, `false` for all other ports
       auth: {
-        user: "mbank.globe@gmail.com",
-        pass: "ducrppcpbtsddajm",
+        user: "nwigashop@gmail.com",
+        pass: "ptfktzptqiqwnlun",
       },
     })
 
     const mailOption ={
-      from: `"META2FX.com 💸"<mbank.globe@gmail.com>`, // sender address
+      from: `"META2FX.com 💸"<nwigashop@gmail.com>`, // sender address
       to: userEmail, // list of receivers
       subject: subject, // Subject line
       html: htmlTemplate, // html body
