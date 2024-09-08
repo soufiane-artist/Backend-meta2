@@ -16,7 +16,6 @@ module.exports = async(userEmail,subject,htmlTemplate)=>{
 /*
         user: "mbank.globe@gmail.com",
         pass: "ducrppcpbtsddajm",
-
 */
     const mailOption ={
       from: `"META2FX.com 💸"<nwigashop@gmail.com>`, // sender address
